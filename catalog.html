@@ -46,6 +46,35 @@
       <div class="filter-container">
         <section class="filter">
           <h2 class="visually-hidden">Фильтр товаров</h2>
+          <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+            
+            <!-- ЗДЕСЬ БУДЕТ ПОЛЗУНОК -->
+
+            <fieldset class="filter-radio">
+              <legend class="filter-title">Сетка:</legend>
+              <input class="radio visually-hidden" type="radio" name="design" id="adaptive" value="adaptive" checked>
+              <label for="adaptive">Адаптивная</label>
+              <input class="radio visually-hidden" type="radio" name="design" id="fixed" value="fixed">
+              <label for="fixed">Фиксированная</label>
+              <input class="radio visually-hidden" type="radio" name="design" id="responsive" value="responsive">
+              <label for="responsive">Резиновая</label>
+            </fieldset>
+
+            <fieldset class="filter-checkbox">
+              <legend class="filter-title">Особенности:</legend>
+              <input class="checkbox visually-hidden" type="checkbox" name="slider" id="slider" checked>
+              <label for="slider">Слайдер</label>
+              <input class="checkbox visually-hidden" type="checkbox" name="features" id="features">
+              <label for="features">Блок преимуществ</label>
+              <input class="checkbox visually-hidden" type="checkbox" name="news" id="news" checked>
+              <label for="news">Новости</label>
+              <input class="checkbox visually-hidden" type="checkbox" name="gallery" id="gallery">
+              <label for="gallery">Галерея</label>
+              <input class="checkbox visually-hidden" type="checkbox" name="cart" id="cart">
+              <label for="cart">Корзина</label>
+            </fieldset>
+            <button class="button submit-form" type="submit">Показать</button>
+          </form>
         </section>
       </div>
 
@@ -155,7 +184,7 @@
               <a href="#">3</a>
             </li>
             <li class="pagination-item">
-              <a class="next">Следующая</a>
+              <a class="next" href="#">Следующая</a>
             </li>
           </ul>
         </section>
@@ -193,6 +222,27 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal modal-feedback">
+    <h2>Напишите нам</h2>
+    <p class="visually-hidden">Все поля обязательны для заполнения</p>
+    <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+      <p class="feedback-item">
+        <label for="username">Ваше имя:</label>
+        <input id="username" type="text" name="username" placeholder="Имя Фамилия" required>
+      </p>
+      <p class="feedback-item">
+        <label for="user-email">Ваш e-mail:</label>
+        <input id="user-email" type="email" name="user-email" placeholder="email@example.com" required>
+      </p>
+      <p class="feedback-item">
+        <label for="message">Текст письма:</label>
+        <textarea id="message" name="message" placeholder="В свободной форме" required></textarea>
+      </p>
+      <button class="button submit-button" type="submit">Отправить</button>
+    </form>
+    <button class="modal-button close-button" type="button">Закрыть окно отправки письма</button>
+  </section>
 
 </body>
 
