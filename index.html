@@ -38,97 +38,125 @@
 
   <main>
 
-      <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
-      
+    <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
+
+    <div class="slider-container">
       <section class="slider">
         <h2 class="visually-hidden">Наши преимущества</h2>
+        <div class="slider-wrapper">
+          <input class="visually-hidden slide-smartphone" type="radio" name="toggle" id="slide-smartphone" checked>
+          <input class="visually-hidden slide-monitor" type="radio" name="toggle" id="slide-monitor">
+          <input class="visually-hidden slide-tablet" type="radio" name="toggle" id="slide-tablet">
+          <div class="slider-controls">
+            <label for="slide-smartphone"></label>
+            <label for="slide-monitor"></label>
+            <label for="slide-tablet"></label>
+          </div>
+          <div class="slide slide-smartphone">
+            <h3>Долго, дорого, скрупулезно.</h3>
+            <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+            <a class="button" href="#">Узнать больше</a>
+          </div>
+          <div class="slide visually-hidden slide-monitor">
+            <h3>Любим математику как никто другой</h3>
+            <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+            <a class="button" href="#">Узнать больше</a>
+          </div>
+          <div class="slide visually-hidden slide-tablet">
+            <h3>Только ночь, только хардкор</h3>
+            <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+            <a class="button" href="#">Узнать больше</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="services-container">
+      <section class="services">
+        <h2 class="visually-hidden">Список наших услуг</h2>
+        <ul class="services-list">
+          <li class="services-item website">
+            <h3>Веб-сайты</h3>
+            <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+            <a class="button" href="#">Заказать</a>
+          </li>
+          <li class="services-item application">
+            <h3>Приложения</h3>
+            <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+            <a class="button" href="#">Заказать</a>
+          </li>
+          <li class="services-item presentation">
+            <h3>Презентации</h3>
+            <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+            <a class="button" href="#">Заказать</a>
+          </li>
+        </ul>
       </section>
 
-      <div class="container">
-        <section class="services">
-          <h2 class="visually-hidden">Список наших услуг</h2>
-          <ul class="services-list">
-            <li class="services-item website">
-              <h3>Веб-сайты</h3>
-              <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-              <a class="button" href="#">Заказать</a>
-            </li>
-            <li class="services-item application">
-              <h3>Приложения</h3>
-              <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-              <a class="button" href="#">Заказать</a>
-            </li>
-            <li class="services-item presentation">
-              <h3>Презентации</h3>
-              <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-              <a class="button" href="#">Заказать</a>
-            </li>
+      <section class="about-us">
+        <h2 class="visually-hidden">О нашей студии</h2>
+        <div class="about-us-left">
+          <p class="about-us-slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не
+            покладая
+            рук, как роботы.</p>
+          <b>Выполняем заказы на разработку:</b>
+          <ul>
+            <li>Веб-сайтов любой сложности</li>
+            <li>Мобильных приложений для iOS и Android</li>
+            <li>Слайдшоу и видео для корпоративных презентаций</li>
           </ul>
-        </section>
+        </div>
+        <div class="about-us-right">
+          <img src="img/logo-color.png" width="360" height="208" alt="Логотип дизайн-студии Нёрдс">
+          <p>С 2004 года Любим точность во всем:</p>
+          <table>
+            <tr class="upper-line">
+              <td>146
+                <sup>%</sup>
+              </td>
+              <td>100
+                <sup>%</sup>
+              </td>
+              <td>50
+                <sup>%</sup>
+              </td>
+            </tr>
+            <tr>
+              <td>Уровень самоотдачи</td>
+              <td>Соблюдение сроков</td>
+              <td>Минимальная предоплата</td>
+            </tr>
+          </table>
+        </div>
+      </section>
 
-        <section class="about-us">
-          <h2 class="visually-hidden">О нашей студии</h2>
-          <div class="about-us-left">
-            <p class="about-us-slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-            <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая
-              рук, как роботы.</p>
-            <b>Выполняем заказы на разработку:</b>
-            <ul>
-              <li>Веб-сайтов любой сложности</li>
-              <li>Мобильных приложений для iOS и Android</li>
-              <li>Слайдшоу и видео для корпоративных презентаций</li>
-            </ul>
-          </div>
-          <div class="about-us-right">
-            <img src="img/logo-color.png" width="360" height="208" alt="Логотип дизайн-студии Нёрдс">
-            <p>С 2004 года Любим точность во всем:</p>
-            <table>
-              <tr class="upper-line">
-                <td>146
-                  <sup>%</sup>
-                </td>
-                <td>100
-                  <sup>%</sup>
-                </td>
-                <td>50
-                  <sup>%</sup>
-                </td>
-              </tr>
-              <tr>
-                <td>Уровень самоотдачи</td>
-                <td>Соблюдение сроков</td>
-                <td>Минимальная предоплата</td>
-              </tr>
-            </table>
-          </div>
-        </section>
-
-        <section class="partners">
-          <h2 class="visually-hidden">Наши партнеры</h2>
-          <ul class="partners-list">
-            <li class="partners-item">
-              <a href="https://htmlacademy.ru/intensive/htmlcss">
-                <img width="260" height="180" src="img/partners/htmlacademy.png" alt="Онлайн школа HTML Academy">
-              </a>
-            </li>
-            <li class="partners-item">
-              <a href="#">
-                <img width="260" height="180" src="img/partners/borodinski.png" alt="Парикмахерская Barbershop «Borodinski»">
-              </a>
-            </li>
-            <li class="partners-item">
-              <a href="#">
-                <img width="260" height="180" src="img/partners/pink.png" alt="Сайт для обмена фотографиями Pink">
-              </a>
-            </li>
-            <li class="partners-item">
-              <a href="#">
-                <img width="260" height="180" src="img/partners/mishka.png" alt="Магазин вязаных изделий ручной работы Mishka">
-              </a>
-            </li>
-          </ul>
-        </section>
-      </div>
+      <section class="partners">
+        <h2 class="visually-hidden">Наши партнеры</h2>
+        <ul class="partners-list">
+          <li class="partners-item">
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <img width="260" height="180" src="img/partners/htmlacademy.png" alt="Онлайн школа HTML Academy">
+            </a>
+          </li>
+          <li class="partners-item">
+            <a href="#">
+              <img width="260" height="180" src="img/partners/borodinski.png" alt="Парикмахерская Barbershop «Borodinski»">
+            </a>
+          </li>
+          <li class="partners-item">
+            <a href="#">
+              <img width="260" height="180" src="img/partners/pink.png" alt="Сайт для обмена фотографиями Pink">
+            </a>
+          </li>
+          <li class="partners-item">
+            <a href="#">
+              <img width="260" height="180" src="img/partners/mishka.png" alt="Магазин вязаных изделий ручной работы Mishka">
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
 
   </main>
 
@@ -161,27 +189,27 @@
       </div>
     </div>
   </footer>
-  
+
   <section class="modal modal-feedback">
     <h2>Напишите нам</h2>
     <p class="visually-hidden">Все поля обязательны для заполнения</p>
     <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
-        <p class="feedback-item">
-            <label for="username">Ваше имя:</label>
-            <input id="username" type="text" name="username" placeholder="Имя Фамилия" required>
-        </p>
-        <p class="feedback-item">
-            <label for="user-email">Ваш e-mail:</label>
-            <input id="user-email" type="email" name="user-email" placeholder="email@example.com" required>
-        </p>
-        <p class="feedback-item">
-            <label for="message">Текст письма:</label>
-            <textarea id="message" name="message" placeholder="В свободной форме" required></textarea>
-        </p>
-        <button class="button submit-button" type="submit">Отправить</button>
+      <p class="feedback-item">
+        <label for="username">Ваше имя:</label>
+        <input id="username" type="text" name="username" placeholder="Имя Фамилия" required>
+      </p>
+      <p class="feedback-item">
+        <label for="user-email">Ваш e-mail:</label>
+        <input id="user-email" type="email" name="user-email" placeholder="email@example.com" required>
+      </p>
+      <p class="feedback-item">
+        <label for="message">Текст письма:</label>
+        <textarea id="message" name="message" placeholder="В свободной форме" required></textarea>
+      </p>
+      <button class="button submit-button" type="submit">Отправить</button>
     </form>
     <button class="modal-button close-button" type="button"><span class="visually-hidden">Закрыть окно отправки письма</span></button>
-</section>
+  </section>
 
 
 </body>
