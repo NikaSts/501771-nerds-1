@@ -3,8 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Дизайн-студия Нёрдс, разработка веб-сайтов и мобильных приложений, выполнение слайд-шоу и видео для презентаций</title>
+  <title>Дизайн-студия Нёрдс, разработка веб-сайтов и мобильных приложений, выполнение слайд-шоу и видео для
+    презентаций</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
@@ -48,21 +51,21 @@
           <input class="visually-hidden slide-monitor" type="radio" name="toggle" id="slide-monitor">
           <input class="visually-hidden slide-tablet" type="radio" name="toggle" id="slide-tablet">
           <div class="slider-controls">
-            <label for="slide-smartphone"></label>
-            <label for="slide-monitor"></label>
-            <label for="slide-tablet"></label>
+            <label for="slide-smartphone"><span class="visually-hidden">Открыть слайд 1</span></label>
+            <label for="slide-monitor"><span class="visually-hidden">Открыть слайд 2</span></label>
+            <label for="slide-tablet"><span class="visually-hidden">Открыть слайд 3</span></label>
           </div>
-          <div class="slide slide-smartphone">
+          <div class="slide hidden-slide slide-smartphone">
             <h3>Долго, дорого, скрупулезно.</h3>
             <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
             <a class="button" href="#">Узнать больше</a>
           </div>
-          <div class="slide visually-hidden slide-monitor">
+          <div class="slide slide-monitor">
             <h3>Любим математику как никто другой</h3>
             <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
             <a class="button" href="#">Узнать больше</a>
           </div>
-          <div class="slide visually-hidden slide-tablet">
+          <div class="slide hidden-slide slide-tablet">
             <h3>Только ночь, только хардкор</h3>
             <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
             <a class="button" href="#">Узнать больше</a>
