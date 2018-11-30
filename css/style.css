@@ -1,0 +1,449 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 1440px;
+}
+
+body {
+  font-family: Roboto, Arial, sans serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.button {
+  font: inherit;
+  line-height: 18px;
+  font-weight: 500;
+
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #fb565a;
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  color: #ffffff;
+  background-color: #e74246;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3); 
+  background-color: #d7373b;
+}
+
+
+/*-------------------HEADER-----------------------*/
+
+
+.header-navigation {
+  line-height: 30px;
+  font-weight: 500;
+  color: #000000;
+  background-color: #eeeeee;
+
+  text-transform: uppercase;
+}
+
+.site-navigation,
+.user-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+  color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #fb565a;
+}
+
+.site-navigation a:active,
+.user-navigation a:active {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.site-navigation .current,
+.user-navigation .current {
+  border-bottom: 2px solid #fb565a;
+}
+
+.site-navigation .current:hover,
+.user-navigation .current:hover {
+  color: #000000;
+}
+
+
+/*--------------------SLIDER-------------------*/
+
+.slide h3 {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.slider-container {
+  background-color: #eeeeee;
+}
+
+
+/*---------------------SERVICES--------------------*/ 
+
+
+.services-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.application a {
+  background-color: #00ca74;
+}
+
+.application a:hover,
+.application a:focus {
+  background-color: #00bc6c;
+}
+
+.application a:active {
+  background-color: #00aa62;
+}
+
+.presentation a {
+  background-color: #efc84a;
+}
+
+.presentation a:hover,
+.presentation a:focus {
+  background-color: #eab534;
+}
+
+.presentation a:active {
+  background-color: #e5a722;
+}
+
+
+/*------------------------ABOUT US-----------------------*/
+
+.about-us-slogan {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.about-us-left b,
+.about-us-right b {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-us-left ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-us-right table {
+  margin: 0;
+  padding: 0;  
+}
+
+.upper-line td {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+}
+
+.partners-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+/*--------------------------FOOTER---------------------------*/
+
+.contacts b {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contacts p {
+  line-height: 18px;
+}
+
+.socials {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-slogan b {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.footer-slogan p {
+  line-height: 22px;
+}
+
+
+
+
+/*---------------------------------------------------------------------*/
+/*----------------------------INNER PAGE-------------------------------*/
+
+.inner-page h1 {
+  margin: 0;
+  padding: 0;
+  
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+
+  text-align: center;
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+/*-------------------------FILTER---------------*/
+
+.filter {
+  font: inherit;
+}
+
+.filter fieldset,
+.filter input {
+  border: none;
+}
+
+.filter input,
+.price-range {
+  background-color: #eeeeee;
+}
+
+.filter label {
+  color: #283136;
+}
+
+.range-result label {
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.filter-radio label,
+.filter-checkbox label {
+  line-height: 20px;
+}
+
+.filter-radio input:hover + label,
+.filter-radio input:focus + label,
+.filter-checkbox input:hover + label,
+.filter-checkbox input:focus + label {
+  color: #000000;
+}
+
+.filter-radio input:disabled + label,
+.filter-checkbox input:disabled + label {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.filter-title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.submit-form {
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.submit-form:hover,
+.submit-form:focus {
+  background-color: #dfdfdf;
+}
+
+.submit-form:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #d5d5d5;
+}
+
+
+/*-------------------------SORTING-------------------------*/
+
+.sorting .filter-title {
+  line-height: 18px;
+}
+
+.sorting ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.do-sorting a {
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+
+.do-sorting .current {
+  color: #000000;
+}
+
+.do-sorting a:hover,
+.do-sorting a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.do-sorting a:active {
+  color: #000000;
+}
+
+
+/*--------------------------CATALOG--------------------------*/
+
+
+.catalog ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog-item-hover {
+  background-color: #eeeeee;
+}
+
+.catalog-item-title a {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.catalog-item p {
+  line-height: 18px;
+  color: #666666;
+}
+
+
+/*-------------------------PAGINATION------------------*/
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-list a {
+  color: #000000;
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: #eeeeee;
+  text-transform: uppercase;
+}
+
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  background-color: #dfdfdf;
+}
+
+.pagination-item a:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #d5d5d5;
+}
+
+.pagination-item .current,
+.pagination-item .current:hover,
+.pagination-item .current:focus,
+.pagination-item .current:active {
+  color: #000000;
+  background-color: #ffffff;
+  border: 3px solid #dbdbdb;
+}
+
+
+
+
+
+/*---------------------------MODAL-----------------------*/
+
+.modal h2 {
+  margin: 0;
+  padding: 0;
+  
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.feedback-item label {
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.feedback-item input,
+.feedback-item textarea {
+  font: inherit;
+  line-height: 18px;
+
+  border: solid 2px #d7dcde;
+}
+
+.feedback-item input:hover,
+.feedback-item textarea:hover {
+  border: solid 2px #b4b9bb;
+}
+
+.feedback-item input:focus,
+.feedback-item textarea:focus {
+  border: solid 2px #000000;
+}
+
+
+
+/*
+
+Закомментировала, потому что пустая форма считается невалидной еще до попытки отправки на сервер. Это поведение, знаю, можно переопределить через JS. А через css можно? Чтобы бордер не был сразу красным? Если да, то где об этом почитать, я не нашла((
+
+.feedback-item input:invalid,
+.feedback-item textarea:invalid {
+  border: 2px solid #e74246;
+} 
+
+*/
+
