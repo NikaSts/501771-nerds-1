@@ -6,7 +6,7 @@ body {
 }
 
 body {
-  font-family: Roboto, Arial, sans serif;
+  font-family: Roboto, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -17,7 +17,6 @@ body {
 a {
   text-decoration: none;
 }
-
 
 .button {
   font: inherit;
@@ -46,7 +45,6 @@ a {
 
 
 /*-------------------HEADER-----------------------*/
-
 
 .header-navigation {
   line-height: 30px;
@@ -105,9 +103,23 @@ a {
   background-color: #eeeeee;
 }
 
+.slide-smartphone {
+  background-image: url("../img/slide-smartphone.png");
+  background-repeat: no-repeat;
+}
+
+.slide-monitor {
+  background-image: url("../img/slide-monitor.png");
+  background-repeat: no-repeat;
+}
+
+.slide-tablet {
+  background-image: url("../img/slide-tablet.png");
+  background-repeat: no-repeat;
+}
+
 
 /*---------------------SERVICES--------------------*/ 
-
 
 .services-list {
   margin: 0;
@@ -217,15 +229,13 @@ a {
 }
 
 
-
-
 /*---------------------------------------------------------------------*/
 /*----------------------------INNER PAGE-------------------------------*/
 
 .inner-page h1 {
   margin: 0;
   padding: 0;
-  
+
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
@@ -234,6 +244,7 @@ a {
   color: #000000;
   background-color: #eeeeee;
 }
+
 
 /*-------------------------FILTER---------------*/
 
@@ -336,7 +347,6 @@ a {
 
 /*--------------------------CATALOG--------------------------*/
 
-
 .catalog ul {
   margin: 0;
   padding: 0;
@@ -376,7 +386,6 @@ a {
   text-transform: uppercase;
 }
 
-
 .pagination-item a:hover,
 .pagination-item a:focus {
   background-color: #dfdfdf;
@@ -397,15 +406,12 @@ a {
 }
 
 
-
-
-
 /*---------------------------MODAL-----------------------*/
 
 .modal h2 {
   margin: 0;
   padding: 0;
-  
+
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
@@ -434,16 +440,10 @@ a {
   border: solid 2px #000000;
 }
 
-
-
-/*
-
-Закомментировала, потому что пустая форма считается невалидной еще до попытки отправки на сервер. Это поведение, знаю, можно переопределить через JS. А через css можно? Чтобы бордер не был сразу красным? Если да, то где об этом почитать, я не нашла((
-
 .feedback-item input:invalid,
 .feedback-item textarea:invalid {
   border: 2px solid #e74246;
 } 
 
-*/
+
 
