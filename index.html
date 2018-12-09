@@ -39,7 +39,7 @@
     </nav>
   </header>
 
-  <main>
+  <main class="container">
 
     <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
 
@@ -164,7 +164,7 @@
   </main>
 
   <footer class="page-footer">
-    <div class="footer-top">
+    <di v class="footer-top">
       <div class="contacts">
         <b>Nёrds design studio</b>
         <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -172,7 +172,7 @@
         <a class="button" href="#">Напишите нам</a>
       </div>
       <img width="1440" height="416" src="img/map.png" alt="Офис студии находится по адресу улица Большая Конюшенная, дом 19/8, город Санкт-Петербург, индекс 191186">
-    </div>
+    </di>
     <div class="footer-bottom">
       <h2 class="visually-hidden">Дизайн-студия Нёрдс в социальных сетях</h2>
       <ul class="socials">
@@ -197,6 +197,7 @@
     <h2>Напишите нам</h2>
     <p class="visually-hidden">Все поля обязательны для заполнения</p>
     <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+      <div class="modal-top">
       <p class="feedback-item">
         <label for="username">Ваше имя:</label>
         <input id="username" type="text" name="username" placeholder="Имя Фамилия">
@@ -205,10 +206,13 @@
         <label for="user-email">Ваш e-mail:</label>
         <input id="user-email" type="email" name="user-email" placeholder="email@example.com">
       </p>
+    </div>
+    <div class="modal-bottom">
       <p class="feedback-item">
         <label for="message">Текст письма:</label>
         <textarea id="message" name="message" placeholder="В свободной форме"></textarea>
       </p>
+    </div>
       <button class="button submit-button" type="submit">Отправить</button>
     </form>
     <button class="modal-button close-button" type="button"><span class="visually-hidden">Закрыть окно отправки письма</span></button>
