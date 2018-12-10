@@ -5,6 +5,14 @@ body {
   min-width: 1440px;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+.content-box-component {
+  box-sizing: content-box;
+}
+
 body {
   font-family: Roboto, Arial, sans-serif;
   font-size: 16px;
@@ -18,9 +26,14 @@ a {
   text-decoration: none;
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 .container {
-  width: 1160px;
+  width: 1200px;
   margin: auto;
+  padding: 0 20px;
 }
 
 .button {
@@ -36,7 +49,6 @@ a {
 
   text-align: center;
   color: #ffffff;
-  vertical-align: middle;  /*сработало только для кнопки формы, может лучше флексом сделать?*/
   text-transform: uppercase;
 
   background-color: #fb565a;
@@ -72,18 +84,6 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-.content-box-component {
-  box-sizing: content-box;
-}
-
 
 /*-------------------HEADER-----------------------*/
 
@@ -98,9 +98,6 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
-
-  width: 1160px;
 
   line-height: 30px;
   font-weight: 500;
@@ -220,9 +217,7 @@ html {
 }
 
 .services-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  display: block;
 
   width: 300px;
   min-height: 346px;
@@ -234,6 +229,7 @@ html {
 
 .services-item h3 {
   margin: 0;
+  margin-bottom: 20px;
 
   font-size: 24px;
   line-height: 30px;
@@ -242,15 +238,14 @@ html {
 
   /*временно*/
   margin-top: 170px;
-  margin-bottom: 20px;
 }
 
 .services-item p {
-  display: flex;
+  display: block;
 
   width: 260px;
   margin: 0;
-  
+  margin-bottom: 35px;
 }
 
 .application a {
@@ -280,8 +275,7 @@ html {
 }
 
 .services-item .button {
-  margin-top: auto;
-  margin-right: auto;
+  width: 160px;
 }
 
 
@@ -304,7 +298,7 @@ html {
 }
 
 .about-us-slogan {
-  display: flex;
+  display: block;
 
   width: 620px;
 
@@ -407,8 +401,9 @@ html {
 .footer-bottom {
   display: flex;
 
-  width: 1160px;
+  width: 1200px;
   margin: auto;
+  padding: 0 20px;
 }
 
 .socials {
@@ -428,8 +423,7 @@ html {
   width: 78px;
   height: 78px;
 
-  margin-left: 1px;
-  margin-right: 11px;
+  margin-right: 10px;
 
   background-color: #e1e1e1;
   border-radius: 50%;
@@ -460,14 +454,19 @@ html {
 /*---------------------------------------------------------------------*/
 /*----------------------------INNER PAGE-------------------------------*/
 
-.inner-page h1 {
-  display: block;
+.inner-page .wrapper {
   width: 100%;
   min-height: 231px;
-  margin: 0;
   margin-bottom: 60px;
-  padding: 0;
   padding-top: 68px;
+
+  background-color: #eeeeee;
+}
+
+.inner-page h1 {
+  width: 1200px;
+  margin: auto;
+  padding: 0 20px;
 
   font-size: 55px;
   line-height: 55px;
@@ -529,15 +528,9 @@ html {
   text-transform: uppercase;
 }
 
-.filter-radio,
-.filter-checkbox {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 .filter-radio label,
 .filter-checkbox label {
+  display: block;
   margin-bottom: 20px;
 
   line-height: 20px;
