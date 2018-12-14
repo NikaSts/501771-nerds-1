@@ -346,7 +346,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services-item .button {
-  width: 160px;  
+  width: 160px;
   cursor: pointer;
 }
 
@@ -659,8 +659,8 @@ input[type="radio"].visually-hidden {
   color: #444444;
 }
 
-
 /*---------------------------------------------------------------------*/
+
 /*----------------------------INNER PAGE-------------------------------*/
 
 .inner-page .heading-wrapper {
@@ -687,7 +687,6 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   padding-top: 55px;
 }
-
 
 /*-------------------------FILTER---------------*/
 
@@ -845,7 +844,7 @@ input[type="radio"].visually-hidden {
   opacity: 0.5;
 }
 
-.filter-radio input[type="radio"]:checked + label:before {
+.filter-radio input[type="radio"]:checked+label:before {
   background-image: url("../img/filters/radio-on.svg");
 }
 
@@ -862,14 +861,14 @@ input[type="radio"].visually-hidden {
   opacity: 0.5;
 }
 
-.filter-checkbox input[type="checkbox"]:checked + label:before {
+.filter-checkbox input[type="checkbox"]:checked+label:before {
   background-image: url("../img/filters/checkbox-on.svg");
 }
 
 .filter-radio label:hover:before,
-.filter-radio input:focus + label:before,
+.filter-radio input:focus+label:before,
 .filter-checkbox label:hover:before,
-.filter-checkbox input:focus + label:before {
+.filter-checkbox input:focus+label:before {
   opacity: 1;
 }
 
@@ -938,6 +937,7 @@ input[type="radio"].visually-hidden {
 }
 
 .display-sorting {
+  position: relative;
   display: block;
   width: 60px;
   height: 30px;
@@ -973,6 +973,28 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.display-sorting:before,
+.display-sorting:after {
+  position: absolute;
+
+  content: "";
+  top: 8px;
+  width: 11px;
+  height: 10px;
+
+  cursor: pointer;
+}
+.display-sorting:before {
+  left: 19px;
+  background-image: url(../img/icons/icon-down-dir.svg);
+}
+
+.display-sorting:after {
+  left: 48px;
+  background-image: url(../img/icons/icon-up-dir.svg);
+  opacity: 0.3;
+}
+
 /*--------------------------CATALOG--------------------------*/
 
 .catalog-list {
@@ -986,10 +1008,8 @@ input[type="radio"].visually-hidden {
 
 .catalog-item {
   position: relative;
-
   margin-top: 73px;
-  box-shadow:
-    inset 0 0 1px 1px #e9e9e9;
+  box-shadow: inset 0 0 1px 1px #e9e9e9;
 }
 
 .catalog-item:before {
@@ -1022,11 +1042,9 @@ input[type="radio"].visually-hidden {
   display: none;
   position: absolute;
   bottom: 0;
-  
   width: 360px;
   height: 231px;
   padding-top: 27px;
-
   background-color: #eeeeee;
 }
 
@@ -1042,7 +1060,6 @@ input[type="radio"].visually-hidden {
   width: 159px;
   margin: 0 auto;
   margin-bottom: 15px;
-  
   text-align: center;
 }
 
@@ -1058,7 +1075,6 @@ input[type="radio"].visually-hidden {
   width: 235px;
   margin: 0 auto;
   margin-bottom: 30px;
-
   line-height: 18px;
   color: #666666;
   text-align: center;
@@ -1070,15 +1086,28 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+.catalog-item:after {
+  display: block;
+  position: absolute;
+  z-index: -3;
+  content: "";
+  bottom: 0;
+  width: 360px;
+  height: 310px;
+}
+
+.catalog-item:hover .catalog-item:after {
+  /*  Не работает!! Почему? */
+  box-shadow: 0 10px 10px rgba(41, 52, 73, 0.3);
+}
+
 /*-------------------------PAGINATION------------------*/
 
 .pagination-list {
   display: flex;
   flex-wrap: wrap;
-  
   margin-top: 60px;
   padding: 0;
-
   list-style: none;
 }
 
@@ -1088,16 +1117,12 @@ input[type="radio"].visually-hidden {
   height: 50px;
   margin-right: 11px;
   padding-top: 11px;
-
-
   color: #000000;
   background-color: #eeeeee;
-
   text-align: center;
   text-transform: uppercase;
   border: 3px solid transparent;
   border-radius: 3px;
-
   cursor: pointer;
 }
 
