@@ -163,7 +163,7 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
-.current {
+.navigation .current {
   position: relative;
 }
 
@@ -188,6 +188,8 @@ input[type="radio"].visually-hidden {
 }
 
 .slider {
+  position: relative;
+
   margin: auto;
   width: 1160px;
 }
@@ -197,7 +199,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-smartphone {
-  display: none;
+  display: block;
   height: 430px;
   background-image: url("../img/slide-smartphone.png");
   background-repeat: no-repeat;
@@ -205,7 +207,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-monitor {
-  display: block;
+  display: none;
   height: 430px;
   background-image: url("../img/slide-monitor.png");
   background-repeat: no-repeat;
@@ -244,6 +246,12 @@ input[type="radio"].visually-hidden {
   width: 240px;
   margin-top: 40px;
   cursor: pointer;
+}
+
+.slider input {
+  position: absolute;
+  bottom: -111px;
+  left: 539px;
 }
 
 /*---------------------SERVICES--------------------*/
@@ -972,6 +980,7 @@ input[type="radio"].visually-hidden {
 
   cursor: pointer;
 }
+
 .display-high::before {
   left: 19px;
   opacity: 1;
@@ -1023,7 +1032,8 @@ input[type="radio"].visually-hidden {
   opacity: 0.1;
 }
 
-.catalog-item:hover::before {
+.catalog-item:hover::before,
+.catalog-item:focus::before {
   opacity: 1;
 }
 
@@ -1037,7 +1047,7 @@ input[type="radio"].visually-hidden {
   margin-right: 40px;
 }
 
-.catalog-item-hover {
+.catalog-description {
   position: absolute;
   bottom: 0;
   width: 360px;
@@ -1047,22 +1057,24 @@ input[type="radio"].visually-hidden {
   opacity: 0;
 }
 
-.catalog-item:hover .catalog-item-hover {
+.catalog-item:hover .catalog-description,
+.catalog-item:focus .catalog-description {
   opacity: 1;
 }
 
-.catalog-item:hover .catalog-item::before {
+.catalog-item:hover .catalog-item::before,
+.catalog-item:focus .catalog-item::before {
   opacity: 1;
 }
 
-.catalog-item-hover h3 {
+.catalog-description h3 {
   width: 159px;
   margin: 0 auto;
   margin-bottom: 15px;
   text-align: center;
 }
 
-.catalog-item-title a {
+.catalog-title span {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -1070,7 +1082,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 }
 
-.catalog-item-hover p {
+.catalog-description p {
   width: 235px;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -1079,7 +1091,7 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-.catalog-item-hover .button {
+.catalog-description .button {
   width: 200px;
   margin: 0 auto;
   cursor: pointer;
@@ -1147,44 +1159,96 @@ input[type="radio"].visually-hidden {
 /*---------------------------MODAL-----------------------*/
 
 .modal {
-  display: flex;
-  flex-direction: column;
+  /*временно*/
+  display: none;
+
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1000;
+}
+
+.modal-feedback {
   width: 960px;
   min-height: 590px;
-  padding-top: 70px;
+  margin: 0;
+  padding-top: 67px;
   padding-bottom: 84px;
   padding-left: 100px;
   padding-right: 100px;
+
   background-color: #ffffff;
-  box-sizing: border-box;
-  z-index: 1000;
-  /*временно*/
-  border: 1px solid red;
+  box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
 }
 
 .modal h2 {
   margin: 0;
   padding: 0;
+  margin-left: -2px;
+
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
 }
 
 .feedback-form {
+  padding-top: 40px;
+}
+
+
+.modal-top {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+
+  margin-bottom: 33px;
+}
+
+.feedback-item {
+  display: block;
+
+  margin: 0;
+  padding: 0;
 }
 
 .feedback-item label {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+
   line-height: 18px;
   font-weight: 700;
 }
 
 .feedback-item input,
 .feedback-item textarea {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+  padding-left: 13px;
+
   font: inherit;
   line-height: 18px;
   border: 2px solid #d7dcde;
+}
+
+.feedback-item input {
+  width: 360px;
+  height: 50px;
+}
+
+.feedback-item textarea {
+  width: 760px;
+  height: 118px;
+  padding-top: 11px;
+
+  box-sizing: border-box;
+  resize: none;
 }
 
 .feedback-item input:hover,
@@ -1205,5 +1269,40 @@ input[type="radio"].visually-hidden {
 
 .submit-button {
   width: 260px;
+  margin: 0;
+  margin-top: 47px;
   padding: 0;
+}
+
+.close-button {
+  position: absolute;
+
+  top: 70px;
+  right: 80px;
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.close-button::before,
+.close-button::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 6px;
+
+  width: 26px;
+  height: 4px;
+  background-color: #ee3643;
+}
+
+.close-button::before {
+  transform: rotate(45deg);
+}
+
+.close-button::after {
+  transform: rotate(-45deg);
 }
