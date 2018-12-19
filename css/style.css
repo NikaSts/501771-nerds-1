@@ -168,8 +168,9 @@ input[type="radio"].visually-hidden {
 }
 
 .navigation .current::before {
-  content: "";
   position: absolute;
+
+  content: "";
   top: 33px;
   width: 74px;
   height: 2px;
@@ -250,30 +251,29 @@ input[type="radio"].visually-hidden {
 
 .slider input {
   position: absolute;
-  bottom: 98px;
-  left: 538px;
-  cursor: pointer;
+  top: -1000px;
 }
 
-.slider .monitor-toggle {
-  left: 573px;
-}
-
-.slider .tablet-toggle {
-  left: 609px;
-}
-
-.slider input::before {
+ .slider-controls label {
   position: absolute;
 
-  content: "";
+  bottom: 96px;
+  left: 536px;
   width: 18px;
   height: 18px;
 
   background-color: #ffffff;
   border-radius: 50%;
+  cursor: pointer;
 }
 
+.slider-controls label[for="slide-monitor"] {
+  left: 571px;
+}
+
+.slider-controls label[for="slide-tablet"] {
+  left: 606px;
+}
 
 /*---------------------SERVICES--------------------*/
 
@@ -970,14 +970,13 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
-  cursor: pointer;
 }
 
 .do-sorting .current {
   color: #000000;
 }
 
-.do-sorting a:hover,
+.do-sorting a[href]:hover,
 .do-sorting a:focus {
   color: rgba(0, 0, 0, 0.6);
 }
@@ -986,40 +985,46 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.display-high::before,
-.display-low::before {
+.arrow {
+  position: absolute;
+
+  width: 20px;
+  height: 30px;
+  left: 14px;
+}
+
+.arrow-up {
+  left: 43px;
+}
+
+.arrow-up::before,
+.arrow-down::before {
   position: absolute;
 
   content: "";
   top: 8px;
+  left: 5px;
   width: 11px;
   height: 10px;
 
   background-image: url(../img/icons/icon-down-dir.svg);
   opacity: 0.3;
-
-  cursor: pointer;
 }
 
-.display-high::before {
-  left: 19px;
+.arrow-down::before {
   opacity: 1;
 }
 
-.display-low::before {
-  left: 48px;
+.arrow-up::before {
   transform: rotate(180deg);
 }
 
-.display-high:hover::before,
-.display-high:focus::before,
-.display-low:hover::before,
-.display-low:focus::before {
+.arrow[href]:hover::before,
+.arrow:focus::before {
   opacity: 0.6;
 }
 
-.display-high:active::before,
-.display-low:active::before {
+.arrow[href]:active::before {
   opacity: 1;
 }
 
