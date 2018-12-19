@@ -250,9 +250,30 @@ input[type="radio"].visually-hidden {
 
 .slider input {
   position: absolute;
-  bottom: -111px;
-  left: 539px;
+  bottom: 98px;
+  left: 538px;
+  cursor: pointer;
 }
+
+.slider .monitor-toggle {
+  left: 573px;
+}
+
+.slider .tablet-toggle {
+  left: 609px;
+}
+
+.slider input::before {
+  position: absolute;
+
+  content: "";
+  width: 18px;
+  height: 18px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
 
 /*---------------------SERVICES--------------------*/
 
@@ -510,12 +531,11 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-top {
-  margin-bottom: 69px;
-}
-
-.contacts-wrapper {
   position: relative;
+  width: 1440px;
   margin: 0 auto;
+
+  margin-bottom: 69px;
 }
 
 .footer-top img {
@@ -529,7 +549,7 @@ input[type="radio"].visually-hidden {
 .contacts {
   position: absolute;
   top: 54px;
-  left: 372px;
+  left: 140px;
   width: 319px;
   height: 308px;
   padding-top: 50px;
