@@ -1041,14 +1041,19 @@ input[type="radio"].visually-hidden {
 
 .catalog-item {
   position: relative;
-  margin-top: 73px;
+  margin-top: 33px;
   box-shadow: inset 0 0 1px 1px #e9e9e9;
 }
 
-.catalog-item::before {
+.catalog-card {
+  display: block;
+  padding-top: 40px;
+}
+
+.catalog-card::before {
   content: "";
   position: absolute;
-  top: -40px;
+  top: 0px;
   width: 360px;
   height: 40px;
   background-image: url("../img/browser.svg");
@@ -1057,8 +1062,8 @@ input[type="radio"].visually-hidden {
   opacity: 0.1;
 }
 
-.catalog-item:hover::before,
-.catalog-item:focus::before {
+.catalog-card:hover::before,
+.catalog-card:focus::before {
   opacity: 1;
 }
 
@@ -1080,16 +1085,6 @@ input[type="radio"].visually-hidden {
   padding-top: 27px;
   background-color: #eeeeee;
   opacity: 0;
-}
-
-.catalog-item:hover .catalog-description,
-.catalog-item:focus .catalog-description {
-  opacity: 1;
-}
-
-.catalog-item:hover .catalog-item::before,
-.catalog-item:focus .catalog-item::before {
-  opacity: 1;
 }
 
 .catalog-description h3 {
@@ -1122,7 +1117,17 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.catalog-item::after {
+.catalog-card:hover .catalog-description,
+.catalog-card:focus .catalog-description {
+  opacity: 1;
+}
+
+.catalog-card:hover .catalog-card::before,
+.catalog-card:focus .catalog-card::before {
+  opacity: 1;
+}
+
+.catalog-card::after {
   display: block;
   position: absolute;
   z-index: -3;
@@ -1132,8 +1137,9 @@ input[type="radio"].visually-hidden {
   height: 310px;
 }
 
-.catalog-item:hover::after {
-  box-shadow: 0 10px 10px rgba(41, 52, 73, 0.3);
+.catalog-card:hover::after,
+.catalog-card:focus::after {
+  box-shadow: 0 10px 10px rgba(125, 150, 197, 0.3), 0 -290px 10px rgba(125, 150, 197, 0.2);
 }
 
 /*-------------------------PAGINATION------------------*/
