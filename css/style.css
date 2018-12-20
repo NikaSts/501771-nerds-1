@@ -200,7 +200,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-smartphone {
-  display: block;
+  display: none;
   height: 430px;
   background-image: url("../img/slide-smartphone.png");
   background-repeat: no-repeat;
@@ -262,8 +262,10 @@ input[type="radio"].visually-hidden {
   width: 18px;
   height: 18px;
 
-  background-color: #ffffff;
+  border: 5px solid #ffffff;
   border-radius: 50%;
+  background-color: #ffffff;
+
   cursor: pointer;
 }
 
@@ -273,6 +275,18 @@ input[type="radio"].visually-hidden {
 
 .slider-controls label[for="slide-tablet"] {
   left: 606px;
+}
+
+.slider input[id="slide-smartphone"]:checked ~ .slider-controls label[for="slide-smartphone"],
+.slider input[id="slide-monitor"]:checked ~ .slider-controls label[for="slide-monitor"],
+.slider input[id="slide-tablet"]:checked ~ .slider-controls label[for="slide-tablet"] {
+  box-shadow: inset 0 0 3px #000000;
+}
+
+.slider input[id="slide-smartphone"]:checked ~ .slide-smartphone,
+.slider input[id="slide-monitor"]:checked ~ .slide-monitor,
+.slider input[id="slide-tablet"]:checked ~ .slide-tablet {
+  display: block;
 }
 
 /*---------------------SERVICES--------------------*/
@@ -989,8 +1003,9 @@ input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 20px;
-  height: 30px;
+  height: 17px;
   left: 14px;
+  top: 5px;
 }
 
 .arrow-up {
@@ -1002,7 +1017,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
 
   content: "";
-  top: 8px;
+  top: 3px;
   left: 5px;
   width: 11px;
   height: 10px;
