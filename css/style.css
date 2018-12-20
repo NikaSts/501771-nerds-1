@@ -115,6 +115,7 @@ input[type="radio"].visually-hidden {
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
+  flex-basis: 440px;
   width: 440px;
   padding-left: 2px;
 }
@@ -779,7 +780,9 @@ input[type="radio"].visually-hidden {
   border: none;
   border-radius: 50%;
   box-shadow: none;
-  box-shadow: 0 2px 1px 0 #cecece
+  box-shadow: 0 2px 1px 0 #cecece;
+
+  cursor: pointer;
 }
 
 .price-range .price-to {
@@ -1096,14 +1099,15 @@ input[type="radio"].visually-hidden {
   position: absolute;
   bottom: 0;
   width: 360px;
-  height: 231px;
+
   padding-top: 27px;
+  padding-bottom: 43px;
   background-color: #eeeeee;
   opacity: 0;
 }
 
 .catalog-description h3 {
-  width: 159px;
+  width: 160px;
   margin: 0 auto;
   margin-bottom: 15px;
   text-align: center;
@@ -1154,6 +1158,15 @@ input[type="radio"].visually-hidden {
 
 .catalog-card:hover::after,
 .catalog-card:focus::after {
+  box-shadow: 0 10px 10px rgba(125, 150, 197, 0.3), 0 -290px 10px rgba(125, 150, 197, 0.2);
+}
+
+.catalog-item:first-child .catalog-description,
+.catalog-item:first-child .catalog-card::before {
+  opacity: 1;
+}
+
+.catalog-item:first-child .catalog-card::after {
   box-shadow: 0 10px 10px rgba(125, 150, 197, 0.3), 0 -290px 10px rgba(125, 150, 197, 0.2);
 }
 
