@@ -200,20 +200,20 @@
           </ul>
 
           <h2 class="visually-hidden">Навигация по страницам</h2>
-          <ul class="pagination-list">
-            <li class="pagination-item">
-              <a class="current">1</a>
-            </li>
-            <li class="pagination-item">
-              <a href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="next" href="#">Следующая</a>
-            </li>
-          </ul>
+          <div class="pagination">
+            <ul class="pagination-list">
+              <li class="pagination-item">
+                <a class="current">1</a>
+              </li>
+              <li class="pagination-item">
+                <a href="#">2</a>
+              </li>
+              <li class="pagination-item">
+                <a href="#">3</a>
+              </li>
+            </ul>
+            <a class="next pagination-item" href="#">Следующая</a>
+          </div>
         </section>
       </div>
     </div>
@@ -227,8 +227,10 @@
           <b>Nёrds design studio</b>
           <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <p class="phone">тел. +7 (812) 275-75-75</p>
-          <a class="button" href="#">Напишите нам</a>
+          <a class="button open-modal-feedback" href="#">Напишите нам</a>
         </div>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1f2a8b6278510f8b48bff714d7720fcc0e601522c7182105c815832701df685c&amp;source=constructor"
+          height="416"></iframe>
       </div>
       <img width="1440" height="416" src="img/map.png" alt="Офис студии находится по адресу улица Большая Конюшенная, дом 19/8, город Санкт-Петербург, индекс 191186">
     </div>
@@ -257,25 +259,27 @@
     <p class="visually-hidden">Все поля обязательны для заполнения</p>
     <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
       <div class="modal-top">
-        <p class="feedback-item">
+        <div class="feedback-item">
           <label for="username">Ваше имя:</label>
           <input id="username" type="text" name="username" placeholder="Имя Фамилия">
-        </p>
-        <p class="feedback-item">
+        </div>
+        <div class="feedback-item">
           <label for="user-email">Ваш e-mail:</label>
           <input id="user-email" type="email" name="user-email" placeholder="email@example.com">
-        </p>
+        </div>
       </div>
       <div class="modal-bottom">
-        <p class="feedback-item">
+        <div class="feedback-item">
           <label for="message">Текст письма:</label>
           <textarea id="message" name="message" placeholder="В свободной форме"></textarea>
-        </p>
+        </div>
       </div>
       <button class="button submit-button" type="submit">Отправить</button>
     </form>
     <button class="modal-button close-button" type="button"><span class="visually-hidden">Закрыть окно отправки письма</span></button>
   </section>
+
+  <script src="js/script.js"></script>
 
 </body>
 
