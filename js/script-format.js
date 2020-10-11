@@ -1,13 +1,13 @@
-var openModalFeedback = document.querySelector(".open-modal-feedback");
-var popup = document.querySelector(".modal-feedback");
-var closeModalFeedback = popup.querySelector(".close-button");
-var form = popup.querySelector(".feedback-form");
-var userName = popup.querySelector("[name=username]");
-var userEmail = popup.querySelector("[name=user-email]");
-var messageText = popup.querySelector("[name=message]");
-var isStorageSupport = true;
-var localUserName = localStorage.getItem("userName");
-var localUserEmail = localStorage.getItem("userEmail");
+const openModalFeedback = document.querySelector(".open-modal-feedback");
+const popup = document.querySelector(".modal-feedback");
+const closeModalFeedback = popup.querySelector(".close-button");
+const form = popup.querySelector(".feedback-form");
+const userName = popup.querySelector("[name=username]");
+const userEmail = popup.querySelector("[name=user-email]");
+const messageText = popup.querySelector("[name=message]");
+const isStorageSupport = true;
+const localUserName = localStorage.getItem("userName");
+const localUserEmail = localStorage.getItem("userEmail");
 
 try {
   storage = localStorage.getItem("userName");
@@ -19,12 +19,14 @@ try {
 openModalFeedback.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("modal-show");
+
   if (localUserName) {
     userName.value = localUserName;
     userEmail.focus();
   } else {
     userName.focus();
   }
+
   if (localUserEmail) {
     userEmail.value = localUserEmail;
     messageText.focus();
@@ -53,10 +55,10 @@ form.addEventListener("submit", function (evt) {
     popup.classList.remove("modal-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("modal-error");
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem("userName", userName.value);
-      localStorage.setItem("userEmail", userEmail.value);
-    }
+  }
+
+  if (isStorageSupport) {
+    localStorage.setItem("userName", userName.value);
+    localStorage.setItem("userEmail", userEmail.value);
   }
 });
